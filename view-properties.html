@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Properties | Luma Estates</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">LUMA<span>ESTATES</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="view-properties.html">Properties</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="properties-hero">
+      <div>
+        <p class="eyebrow">LUMA ESTATES</p>
+        <h1>Explore our properties.</h1>
+        <p>Browse our complete collection of carefully selected homes, apartments and villas.</p>
+      </div>
+    </section>
+
+    <section class="section properties-page">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PROPERTY COLLECTION</p>
+          <h2>Find your next home</h2>
+        </div>
+        <p id="result-count" class="result-count"></p>
+      </div>
+
+      <form class="property-filters" id="property-filter-form">
+        <label>
+          Search location
+          <input id="property-location" type="search" placeholder="e.g. Clifton">
+        </label>
+        <label>
+          Property type
+          <select id="property-type">
+            <option value="Any type">Any type</option>
+            <option value="House">House</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Villa">Villa</option>
+          </select>
+        </label>
+        <label>
+          Maximum price
+          <select id="property-price">
+            <option value="Any price">Any price</option>
+            <option value="5000000">R5 million</option>
+            <option value="10000000">R10 million</option>
+            <option value="15000000">R15 million</option>
+            <option value="20000000">R20 million</option>
+          </select>
+        </label>
+        <button class="button" type="submit">Apply filters</button>
+        <button class="reset-button" type="button" id="reset-filters">Reset</button>
+      </form>
+
+      <div class="property-grid full-property-grid" id="all-properties"></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="index.html">LUMA<span>ESTATES</span></a>
+    <p>© 2026 Luma Estates. Property with purpose.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    initPropertiesPage();
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luma Estates | Premium Property</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#">LUMA<span>ESTATES</span></a>
+    <nav class="main-nav">
+      <a href="#properties">Properties</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">PROPERTY • LIFESTYLE • INVESTMENT</p>
+        <h1>Find a place<br><em>worth calling home.</em></h1>
+        <p>Discover exceptional homes, apartments and investment properties in sought-after locations.</p>
+        <a class="button" href="#properties">Explore properties</a>
+      </div>
+
+      <form class="search-panel">
+        <label>Location<input type="text" placeholder="City or suburb"></label>
+        <label>Property type<select><option>Any type</option><option>House</option><option>Apartment</option><option>Villa</option></select></label>
+        <label>Price range<select><option>Any price</option><option>Under R2m</option><option>R2m – R5m</option><option>R5m+</option></select></label>
+        <button class="button" type="submit">Search</button>
+      </form>
+    </section>
+
+    <section class="section" id="properties">
+      <div class="section-heading">
+        <div><p class="eyebrow">CURATED FOR YOU</p><h2>Featured properties</h2></div>
+        <a href="view-properties.html">View all properties →</a>
+      </div>
+
+      <div class="property-grid">
+        <article class="property-card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85" alt="Modern luxury house">
+          <div class="card-body"><span>For Sale</span><h3>Clifton Ocean Residence</h3><p>Clifton, Cape Town</p><strong>R12,500,000</strong></div>
+        </article>
+        <article class="property-card">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Luxury apartment interior">
+          <div class="card-body"><span>For Sale</span><h3>V&A Waterfront Apartment</h3><p>Waterfront, Cape Town</p><strong>R6,950,000</strong></div>
+        </article>
+        <article class="property-card">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=85" alt="Contemporary family home">
+          <div class="card-body"><span>For Sale</span><h3>Constantia Garden Villa</h3><p>Constantia, Cape Town</p><strong>R9,800,000</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats" id="about">
+      <div><strong>15+</strong><span>Years of expertise</span></div>
+      <div><strong>1,200+</strong><span>Properties sold</span></div>
+      <div><strong>98%</strong><span>Client satisfaction</span></div>
+      <div><strong>24/7</strong><span>Dedicated support</span></div>
+    </section>
+
+    <section class="section split-section" id="services">
+      <div><p class="eyebrow">WHY LUMA</p><h2>A smarter way to move.</h2></div>
+      <div class="service-list">
+        <article><span>01</span><div><h3>Local expertise</h3><p>Market insight and neighbourhood knowledge to help you buy with confidence.</p></div></article>
+        <article><span>02</span><div><h3>Curated listings</h3><p>Quality properties selected for design, location and long-term value.</p></div></article>
+        <article><span>03</span><div><h3>Personal guidance</h3><p>From first viewing to final signature, our team stays by your side.</p></div></article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div><p class="eyebrow">LET'S TALK</p><h2>Your next chapter starts here.</h2><p>Tell us what you're looking for and one of our property specialists will be in touch.</p></div>
+      <form class="contact-form">
+        <input type="text" placeholder="Your name">
+        <input type="email" placeholder="Email address">
+        <textarea placeholder="Tell us what you're looking for"></textarea>
+        <button class="button" type="submit">Send enquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <footer><a class="logo" href="#">LUMA<span>ESTATES</span></a><p>© 2026 Luma Estates. Property with purpose.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

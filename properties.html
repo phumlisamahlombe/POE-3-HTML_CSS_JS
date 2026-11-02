@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Properties | Luma Estates</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .properties-hero {
+      padding: 90px 7% 75px;
+      background: var(--navy);
+      color: var(--white);
+    }
+    .properties-hero h1 {
+      max-width: 800px;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+    .properties-hero h1 em {
+      color: #e8d6a8;
+      font-family: Georgia, serif;
+      font-weight: 400;
+    }
+    .properties-hero p:not(.eyebrow) {
+      max-width: 650px;
+      color: #d5dfde;
+    }
+    .properties-toolbar {
+      padding: 28px 7%;
+      background: var(--cream);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .properties-toolbar select,
+    .properties-toolbar input {
+      border: 1px solid var(--line);
+      padding: 13px 15px;
+      background: var(--white);
+      color: var(--text);
+      font: inherit;
+      min-width: 190px;
+    }
+    .results-count {
+      margin-left: auto;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .all-properties {
+      padding-top: 80px;
+    }
+    .back-link {
+      display: inline-block;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 650px) {
+      .properties-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+      }
+      .properties-toolbar select,
+      .properties-toolbar input {
+        width: 100%;
+        min-width: 0;
+      }
+      .results-count {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">LUMA<span>ESTATES</span></a>
+    <nav class="main-nav">
+      <a href="index.html#properties">Featured</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="properties-hero">
+      <p class="eyebrow">THE LUMA COLLECTION</p>
+      <h1>Explore properties<br><em>across South Africa.</em></h1>
+      <p>Browse our wider collection of carefully selected homes, apartments and luxury estates in some of the country's most desirable locations.</p>
+    </section>
+
+    <section class="properties-toolbar">
+      <input id="propertySearch" type="search" placeholder="Search location or property...">
+      <select id="locationFilter">
+        <option value="All">All locations</option>
+        <option value="Cape Town">Cape Town</option>
+        <option value="Johannesburg">Johannesburg</option>
+        <option value="Durban">Durban</option>
+        <option value="Stellenbosch">Stellenbosch</option>
+        <option value="Pretoria">Pretoria</option>
+        <option value="Knysna">Knysna</option>
+      </select>
+      <select id="typeFilter">
+        <option value="All">All property types</option>
+        <option value="House">House</option>
+        <option value="Apartment">Apartment</option>
+        <option value="Villa">Villa</option>
+        <option value="Estate">Estate</option>
+      </select>
+      <select id="sortFilter">
+        <option value="featured">Featured</option>
+        <option value="low">Price: Low to high</option>
+        <option value="high">Price: High to low</option>
+      </select>
+      <span class="results-count" id="resultsCount"></span>
+    </section>
+
+    <section class="section all-properties">
+      <a class="back-link" href="index.html">← Back to home</a>
+      <div class="property-grid" id="allPropertiesGrid">
+
+      <article class="property-card all-property-static" data-static-property="1">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85" alt="Clifton Ocean Residence" loading="lazy">
+          <button class="favourite" data-favourite-all="1" aria-label="Favourite Clifton Ocean Residence">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Clifton Ocean Residence</h3>
+          <p>Clifton, Cape Town</p>
+          <div class="property-meta">5 beds &nbsp; • &nbsp; 4 baths &nbsp; • &nbsp; 420 m²</div>
+          <strong>R12,500,000</strong>
+          <button class="details-button" data-details-all="1">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="2">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="V&A Waterfront Apartment" loading="lazy">
+          <button class="favourite" data-favourite-all="2" aria-label="Favourite V&A Waterfront Apartment">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>V&A Waterfront Apartment</h3>
+          <p>Waterfront, Cape Town</p>
+          <div class="property-meta">3 beds &nbsp; • &nbsp; 2 baths &nbsp; • &nbsp; 180 m²</div>
+          <strong>R6,950,000</strong>
+          <button class="details-button" data-details-all="2">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="3">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=85" alt="Constantia Garden Villa" loading="lazy">
+          <button class="favourite" data-favourite-all="3" aria-label="Favourite Constantia Garden Villa">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Constantia Garden Villa</h3>
+          <p>Constantia, Cape Town</p>
+          <div class="property-meta">4 beds &nbsp; • &nbsp; 3 baths &nbsp; • &nbsp; 350 m²</div>
+          <strong>R9,800,000</strong>
+          <button class="details-button" data-details-all="3">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="4">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85" alt="Camps Bay Modern Retreat" loading="lazy">
+          <button class="favourite" data-favourite-all="4" aria-label="Favourite Camps Bay Modern Retreat">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Camps Bay Modern Retreat</h3>
+          <p>Camps Bay, Cape Town</p>
+          <div class="property-meta">6 beds &nbsp; • &nbsp; 5 baths &nbsp; • &nbsp; 510 m²</div>
+          <strong>R15,900,000</strong>
+          <button class="details-button" data-details-all="4">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="5">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Sea Point City Apartment" loading="lazy">
+          <button class="favourite" data-favourite-all="5" aria-label="Favourite Sea Point City Apartment">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Sea Point City Apartment</h3>
+          <p>Sea Point, Cape Town</p>
+          <div class="property-meta">2 beds &nbsp; • &nbsp; 2 baths &nbsp; • &nbsp; 110 m²</div>
+          <strong>R4,200,000</strong>
+          <button class="details-button" data-details-all="5">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="6">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="Bishopscourt Family Estate" loading="lazy">
+          <button class="favourite" data-favourite-all="6" aria-label="Favourite Bishopscourt Family Estate">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Bishopscourt Family Estate</h3>
+          <p>Bishopscourt, Cape Town</p>
+          <div class="property-meta">6 beds &nbsp; • &nbsp; 5 baths &nbsp; • &nbsp; 620 m²</div>
+          <strong>R18,500,000</strong>
+          <button class="details-button" data-details-all="6">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="7">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Sandton Skyline Penthouse" loading="lazy">
+          <button class="favourite" data-favourite-all="7" aria-label="Favourite Sandton Skyline Penthouse">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Sandton Skyline Penthouse</h3>
+          <p>Sandton, Johannesburg</p>
+          <div class="property-meta">4 beds &nbsp; • &nbsp; 4 baths &nbsp; • &nbsp; 310 m²</div>
+          <strong>R11,800,000</strong>
+          <button class="details-button" data-details-all="7">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="8">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85" alt="Umhlanga Coastal Villa" loading="lazy">
+          <button class="favourite" data-favourite-all="8" aria-label="Favourite Umhlanga Coastal Villa">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Umhlanga Coastal Villa</h3>
+          <p>Umhlanga, Durban</p>
+          <div class="property-meta">5 beds &nbsp; • &nbsp; 4 baths &nbsp; • &nbsp; 390 m²</div>
+          <strong>R8,900,000</strong>
+          <button class="details-button" data-details-all="8">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="9">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=85" alt="Stellenbosch Winelands Estate" loading="lazy">
+          <button class="favourite" data-favourite-all="9" aria-label="Favourite Stellenbosch Winelands Estate">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Stellenbosch Winelands Estate</h3>
+          <p>Stellenbosch, Western Cape</p>
+          <div class="property-meta">6 beds &nbsp; • &nbsp; 5 baths &nbsp; • &nbsp; 580 m²</div>
+          <strong>R14,500,000</strong>
+          <button class="details-button" data-details-all="9">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="10">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85" alt="Waterkloof Family Residence" loading="lazy">
+          <button class="favourite" data-favourite-all="10" aria-label="Favourite Waterkloof Family Residence">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Waterkloof Family Residence</h3>
+          <p>Waterkloof, Pretoria</p>
+          <div class="property-meta">5 beds &nbsp; • &nbsp; 4 baths &nbsp; • &nbsp; 410 m²</div>
+          <strong>R7,350,000</strong>
+          <button class="details-button" data-details-all="10">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="11">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="Knysna Lagoon Retreat" loading="lazy">
+          <button class="favourite" data-favourite-all="11" aria-label="Favourite Knysna Lagoon Retreat">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Knysna Lagoon Retreat</h3>
+          <p>Knysna, Western Cape</p>
+          <div class="property-meta">4 beds &nbsp; • &nbsp; 3 baths &nbsp; • &nbsp; 290 m²</div>
+          <strong>R6,500,000</strong>
+          <button class="details-button" data-details-all="11">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="12">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=85" alt="Claremont Contemporary Home" loading="lazy">
+          <button class="favourite" data-favourite-all="12" aria-label="Favourite Claremont Contemporary Home">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Claremont Contemporary Home</h3>
+          <p>Claremont, Cape Town</p>
+          <div class="property-meta">4 beds &nbsp; • &nbsp; 3 baths &nbsp; • &nbsp; 280 m²</div>
+          <strong>R5,850,000</strong>
+          <button class="details-button" data-details-all="12">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="13">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Camps Bay Ocean Penthouse" loading="lazy">
+          <button class="favourite" data-favourite-all="13" aria-label="Favourite Camps Bay Ocean Penthouse">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Camps Bay Ocean Penthouse</h3>
+          <p>Camps Bay, Cape Town</p>
+          <div class="property-meta">3 beds &nbsp; • &nbsp; 3 baths &nbsp; • &nbsp; 225 m²</div>
+          <strong>R13,200,000</strong>
+          <button class="details-button" data-details-all="13">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="14">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85" alt="Bryanston Modern Estate" loading="lazy">
+          <button class="favourite" data-favourite-all="14" aria-label="Favourite Bryanston Modern Estate">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>Bryanston Modern Estate</h3>
+          <p>Bryanston, Johannesburg</p>
+          <div class="property-meta">5 beds &nbsp; • &nbsp; 5 baths &nbsp; • &nbsp; 520 m²</div>
+          <strong>R10,900,000</strong>
+          <button class="details-button" data-details-all="14">View details</button>
+        </div>
+      </article>
+
+      <article class="property-card all-property-static" data-static-property="15">
+        <div class="image-wrap">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=85" alt="La Lucia Hillside Home" loading="lazy">
+          <button class="favourite" data-favourite-all="15" aria-label="Favourite La Lucia Hillside Home">♡</button>
+        </div>
+        <div class="card-body">
+          <span>For Sale</span>
+          <h3>La Lucia Hillside Home</h3>
+          <p>La Lucia, Durban</p>
+          <div class="property-meta">4 beds &nbsp; • &nbsp; 3 baths &nbsp; • &nbsp; 330 m²</div>
+          <strong>R6,200,000</strong>
+          <button class="details-button" data-details-all="15">View details</button>
+        </div>
+      </article>
+</div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="index.html">LUMA<span>ESTATES</span></a>
+    <p>© 2026 Luma Estates. Property with purpose.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
